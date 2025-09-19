@@ -34,9 +34,9 @@ public class PlayerDataManager {
         if (playerFile.exists()) {
             FileConfiguration dataConfig = YamlConfiguration.loadConfiguration(playerFile);
             boolean isDisabled = dataConfig.getBoolean("premium-check-disabled", false);
-            premiumCheckStatus.put(playerUuid, isDisabled);
+            premiumCheckStatus.put(playerUuid, Boolean.valueOf(isDisabled));
         } else {
-            premiumCheckStatus.put(playerUuid, false);
+            premiumCheckStatus.put(playerUuid, Boolean.FALSE);
         }
     }
 
@@ -56,10 +56,10 @@ public class PlayerDataManager {
     }
 
     public boolean isPremiumCheckDisabled(UUID playerUuid) {
-        return premiumCheckStatus.getOrDefault(playerUuid, false);
+        return premiumCheckStatus.getOrDefault(playerUuid, Boolean.FALSE);
     }
 
     public void setPremiumCheckDisabled(UUID playerUuid, boolean disabled) {
-        premiumCheckStatus.put(playerUuid, disabled);
+        premiumCheckStatus.put(playerUuid, Boolean.valueOf(disabled));
     }
 }

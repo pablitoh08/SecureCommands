@@ -46,7 +46,7 @@ public class DiscordNotifier {
                         + "🔹 Current version: `" + plugin.getDescription().getVersion() + "`\n"
                         + "🔹 Latest version: `" + latestVersion + "`\n"
                         + "🔹 [Update here](" + link + ")");
-                embed.addProperty("color", 0x00FF00); // Green color
+                embed.addProperty("color", Integer.valueOf(0x00FF00));
 
                 JsonObject payload = new JsonObject();
                 JsonArray embeds = new JsonArray();
@@ -76,7 +76,8 @@ public class DiscordNotifier {
         JsonObject embed = new JsonObject();
         embed.addProperty("title", title);
         embed.addProperty("description", message);
-        embed.addProperty("color", 0xFF0000);
+        embed.addProperty("color", Integer.valueOf(0xFF0000));
+
 
         JsonObject payload = new JsonObject();
         JsonArray embeds = new JsonArray();
