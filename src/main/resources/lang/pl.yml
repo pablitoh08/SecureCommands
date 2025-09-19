@@ -1,0 +1,74 @@
+# SecureCommands - Komunikaty Pluginu (Polski)
+# ------------------------------------
+# Ten plik konfiguracyjny centralizuje wszystkie komunikaty pluginu.
+
+# Prefiks, który zostanie dodany do wszystkich komunikatów pluginu.
+# Możesz dostosować go za pomocą kolorów i formatowania.
+prefix: '&b[SecureCommands] &r'
+
+# ⚠️ Komunikaty o błędach i ostrzeżeniach ⚠️
+errors:
+  no_permission: "&cNie masz uprawnień, aby użyć tej komendy."
+  only_players: '&cTę komendę mogą wykonać tylko gracze.'
+  only_console: '&cTę komendę można wykonać tylko z konsoli.'
+  not_whitelisted: '%prefix%&cNie ma cię na białej liście.'
+  already_logged_in: '%prefix%&cJesteś już uwierzytelniony!'
+  not_authenticated: '%prefix%&cTa komenda jest chroniona. Proszę użyj &a/sclogin <hasło>&c.'
+  secure_code_not_set: '%prefix%&cNie ustawiłeś jeszcze kodu bezpieczeństwa. Użyj &a/sc setcode <hasło>&c, aby go utworzyć.'
+  secure_code_already_set: '%prefix%&cJuż ustawiłeś kod bezpieczeństwa.'
+  invalid_code: '%prefix%&cNieprawidłowy kod.'
+  invalid_usage_login: '%prefix%Użycie: &a/sclogin <code>'
+  invalid_usage_setcode: '%prefix%Użycie: &a/sc setcode <hasło>'
+  invalid_usage_resetcode: '%prefix%Użycie: &a/sc resetcode <gracz>'
+  unknown_subcommand: '%prefix%&cNieznana podkomenda. Użycie: &a/sc [setcode|resetcode <gracz>|resetall|reload]'
+  db_error_setting_code: '%prefix%&cWystąpił błąd podczas ustawiania kodu bezpieczeństwa.'
+  db_error_resetting_code: '%prefix%&cWystąpił błąd podczas próby zresetowania kodu bezpieczeństwa dla %player%.'
+  db_error_resetting_all: '%prefix%&cWystąpił błąd podczas próby zresetowania wszystkich kodów bezpieczeństwa.'
+  no_op_permission: '%prefix%&cTę komendę mogą wykonać tylko operatorzy lub konsola.'
+  player_not_found: '%prefix%&cNie znaleziono gracza: &r%player%.'
+  player_not_whitelisted_for_code: '%prefix%&cGracz &r%player%&c nie jest na białej liście, aby mieć kod bezpieczeństwa.'
+  op_removed: '%prefix%&cTwój status OP został usunięty, ponieważ nie ma cię na białej liście.'
+  invalid_usage_add: '%prefix%Użycie: &a/sc add <gracz>'
+  player_already_whitelisted: '%prefix%&cGracz &r%player%&c jest już na białej liście.'
+  invalid_usage_remove: '%prefix%Użycie: &a/sc remove <gracz>'
+  player_not_whitelisted: '%prefix%&cGracz &r%player%&c nie jest na białej liście.'
+  missing_command_arg: "&cProszę podać komendę, którą chcesz dodać lub usunąć."
+  command_already_blocked: "&cKomenda '%command%' jest już zablokowana."
+  command_not_blocked: "&cKomenda '%command%' nie znajduje się na liście zablokowanych komend."
+  premium_kick: "&cWygląda na to, że nie jesteś użytkownikiem premium. Proszę zaloguj się na właściwe konto."
+  blocked_user: "%prefix%&cMasz trwale zablokowany dostęp do tego pluginu."
+  premium_check_disabled_login_required: "&cTwoja weryfikacja premium jest wyłączona. Musisz zalogować się ręcznie za pomocą /sclogin."
+  invalid_usage_premium: "&cNieprawidłowe użycie. Użyj /sc premium <gracz>."
+
+# ✅ Komunikaty o sukcesie ✅
+success:
+  authenticated: '%prefix%&aJesteś teraz uwierzytelniony!'
+  logged_in: '%prefix%&aZalogowano pomyślnie!'
+  code_set: '%prefix%&aKod bezpieczeństwa ustawiono pomyślnie.'
+  code_reset_player: '%prefix%&aKod bezpieczeństwa dla gracza &a%player%&r został pomyślnie zresetowany.'
+  code_reset_all: '%prefix%&aWszystkie kody bezpieczeństwa zostały pomyślnie zresetowane.'
+  config_reloaded: '%prefix%&aPlik konfiguracyjny został ponownie załadowany.'
+  secure_code_sent: '%prefix%&aKod bezpieczeństwa został wysłany do &r%player%&a za pośrednictwem Discorda.'
+  player_added_to_whitelist: '%prefix%&aGracz &a%player%&r został dodany do białej listy.'
+  player_removed_from_whitelist: '%prefix%&aGracz &a%player%&r został usunięty z białej listy.'
+  command_added: "&aKomenda '%command%' została dodana do listy zablokowanych komend."
+  command_removed: "&aKomenda '%command%' została usunięta z listy zablokowanych komend."
+  premium_no_login: "%prefix%Jesteś użytkownikiem premium, nie musisz się logować."
+  premium_no_code: "%prefix%Jesteś użytkownikiem premium, nie musisz ustawiać kodu."
+  premium_authenticated: "%prefix%&aZostałeś automatycznie uwierzytelniony jako użytkownik premium."
+  premium_check_disabled: "%prefix%&aWeryfikacja premium została wyłączona."
+  premium_check_enabled: "%prefix%&aWeryfikacja premium została włączona."
+
+# 🤖 Komunikaty systemowe i specjalne 🤖
+system:
+  enabled: '&aSecureCommands włączony!'
+  disabled: '&cSecureCommands wyłączony!'
+  db_connected: 'Pomyślnie połączono z bazą danych!'
+  db_failed: 'Błąd połączenia z bazą danych! Wyłączanie serwera...'
+  db_not_configured: 'Baza danych nie jest poprawnie skonfigurowana w config.yml!'
+  update_available: 'Dostępna jest nowa wersja SecureCommands: %version%'
+  update_check_failed: 'Nie można sprawdzić aktualizacji: %error%'
+
+# Komunikaty blokera Plugman
+commands:
+  plugman_blocked: "&c⚠ Nie możesz użyć tej komendy."

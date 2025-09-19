@@ -1,0 +1,33 @@
+# Database connection
+database:
+  host: "localhost"
+  port: 3306
+  name: "secure_commands"
+  user: "root"
+  password: "password"
+
+# Plugin language setting
+# Available languages: en, es, fr
+language: "en"
+
+# Whitelisted players
+whitelist:
+  - "Player1"
+  - "Player2"
+
+# Commands to protect
+blocked-commands:
+  - "/op"
+  - "/ban"
+  - "/kick"
+
+# Discord Notifications
+discord:
+  # Enable or disable all Discord notifications
+  enabled: false
+
+  # Webhook to notify about plugin updates
+  update-webhook-url: "YOUR_UPDATES_WEBHOOK_HERE"
+
+  # Webhook to notify about security events (blocked commands, failed logins)
+  security-webhook-url: "YOUR_SECURITY_WEBHOOK_HERE"

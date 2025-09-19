@@ -1,0 +1,87 @@
+# SecureCommands - Plugin Messages (Español)
+# ------------------------------------
+# Este archivo de configuración centraliza todos los mensajes del plugin.
+
+# Prefijo que se añade a todos los mensajes del plugin.
+# Puedes personalizarlo con colores y formato.
+prefix: '&b[SecureCommands] &r'
+
+# ⚠️ Mensajes de Error y Advertencia ⚠️
+errors:
+  no_permission: "&cNo tienes permiso para usar este comando."
+  only_players: '&cSolo los jugadores pueden ejecutar este comando.'
+  only_console: '&cEste comando solo se puede ejecutar desde la consola.'
+  not_whitelisted: '%prefix%&cNo estás en la lista blanca.'
+  already_logged_in: '%prefix%&c¡Ya estás autenticado!'
+  not_authenticated: '%prefix%&cEste comando está protegido. Por favor, usa &a/sclogin <contraseña>&c.'
+  secure_code_not_set: '%prefix%&cAún no has establecido un código de seguridad. Usa &a/sc setcode <contraseña>&c para crear uno.'
+  secure_code_already_set: '%prefix%&cYa has establecido un código de seguridad.'
+  invalid_code: '%prefix%&cCódigo incorrecto.'
+  invalid_usage_login: '%prefix%Uso: &a/sclogin <code>'
+  invalid_usage_setcode: '%prefix%Uso: &a/sc setcode <contraseña>'
+  invalid_usage_resetcode: '%prefix%Uso: &a/sc resetcode <jugador>'
+  unknown_subcommand: '%prefix%&cSubcomando desconocido. Uso: &a/sc [setcode|resetcode <jugador>|resetall|reload]'
+  db_error_setting_code: '%prefix%&cOcurrió un error al establecer el código de seguridad.'
+  db_error_resetting_code: '%prefix%&cOcurrió un error al intentar restablecer el código de seguridad para %player%.'
+  db_error_resetting_all: '%prefix%&cOcurrió un error al intentar restablecer todos los códigos de seguridad.'
+  no_op_permission: '%prefix%&cSolo los operadores o la consola pueden ejecutar este comando.'
+  player_not_found: '%prefix%&cJugador no encontrado: &r%player%.'
+  player_not_whitelisted_for_code: '%prefix%&cEl jugador &r%player%&c no está en la lista blanca para tener un código de seguridad.'
+  op_removed: '%prefix%&cTu estado de OP ha sido eliminado porque no estás en la lista blanca.'
+  invalid_usage_add: '%prefix%Uso: &a/sc add <jugador>'
+  player_already_whitelisted: '%prefix%&cEl jugador &r%player%&c ya está en la lista blanca.'
+  invalid_usage_remove: '%prefix%Uso: &a/sc remove <jugador>'
+  player_not_whitelisted: '%prefix%&cEl jugador &r%player%&c no está en la lista blanca.'
+  missing_command_arg: "&cPor favor, especifica el comando que deseas añadir o eliminar."
+  command_already_blocked: "&cEl comando '%command%' ya está bloqueado."
+  command_not_blocked: "&cEl comando '%command%' no está en la lista de comandos bloqueados."
+  premium_kick: "&cParece que no eres un usuario premium. Por favor, inicia sesión con la cuenta correcta."
+  blocked_user: "%prefix%&cSe te ha bloqueado permanentemente el acceso a este plugin."
+  premium_check_disabled_login_required: "&cTu comprobación premium está desactivada. Debes iniciar sesión manualmente con /sclogin."
+  invalid_usage_premium: "&cUso incorrecto. Usa /sc premium <player>."
+
+# ✅ Mensajes de Éxito ✅
+success:
+  authenticated: '%prefix%&a¡Ahora estás autenticado!'
+  logged_in: '%prefix%&a¡Iniciaste sesión con éxito!'
+  code_set: '%prefix%&aCódigo de seguridad establecido con éxito.'
+  code_reset_player: '%prefix%&aEl código de seguridad del jugador &a%player%&r ha sido restablecido con éxito.'
+  code_reset_all: '%prefix%&aTodos los códigos de seguridad han sido restablecidos con éxito.'
+  config_reloaded: '%prefix%&aEl archivo de configuración ha sido recargado.'
+  secure_code_sent: '%prefix%&aSe ha enviado un código de seguridad a &r%player%&a a través de Discord.'
+  player_added_to_whitelist: '%prefix%&aEl jugador &a%player%&r ha sido añadido a la lista blanca.'
+  player_removed_from_whitelist: '%prefix%&aEl jugador &a%player%&r ha sido eliminado de la lista blanca.'
+  command_added: "&aEl comando '%command%' ha sido añadido a la lista de comandos bloqueados."
+  command_removed: "&aEl comando '%command%' ha sido eliminado de la lista de comandos bloqueados."
+  premium_no_login: "%prefix%Eres un usuario premium, no necesitas iniciar sesión."
+  premium_no_code: "%prefix%Eres un usuario premium, no necesitas establecer un código."
+  premium_authenticated: "%prefix%&aHas sido autenticado automáticamente como un usuario premium."
+  premium_check_disabled: "%prefix%&aLa comprobación premium ha sido deshabilitada."
+  premium_check_enabled: "%prefix%&aLa comprobación premium ha sido habilitada."
+
+# 🤖 Mensajes de Sistema y Especiales 🤖
+system:
+  enabled: '&a¡SecureCommands habilitado!'
+  disabled: '&c¡SecureCommands deshabilitado!'
+  db_connected: '¡Conectado a la base de datos con éxito!'
+  db_failed: '¡Conexión a la base de datos fallida! Apagando el servidor...'
+  db_not_configured: '¡La base de datos no está configurada correctamente en config.yml!'
+  update_available: 'Una nueva versión de SecureCommands está disponible: %version%'
+  update_check_failed: 'No se pudo verificar si hay actualizaciones: %error%'
+
+# Mensajes de Discord
+discord:
+  disabled: 'Las notificaciones de Discord están deshabilitadas en config.yml. Omitiendo.'
+  webhook_not_configured: 'URL del webhook de Discord no configurada. Omitiendo la notificación.'
+  sent: 'Notificación de Discord enviada con éxito.'
+  failed: 'La notificación de Discord falló con el código de respuesta: %code%.'
+  discord_alert_title: '🚫 Alerta de Seguridad 🚫'
+  discord_alert_message: 'El jugador &e%player%&r intentó usar un código incorrecto: &c%password%&r.'
+  discord_blocked_title: '🚨 Comando Bloqueado 🚨'
+  discord_blocked_message: 'El jugador &e%player%&r intentó usar un comando protegido: &c%command%&r.'
+  discord_command_used_title: '🔒 Comando Usado 🔒'
+  discord_command_used_message: 'El jugador autenticado &e%player%&r usó un comando protegido: &c%command%&r.'
+
+# Mensajes del Bloqueador de Plugman
+commands:
+  plugman_blocked: "&c⚠ No puedes usar este comando."

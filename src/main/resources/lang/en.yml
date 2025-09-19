@@ -1,0 +1,87 @@
+# SecureCommands - Plugin Messages (English)
+# ------------------------------------
+# This configuration file centralizes all plugin messages.
+
+# Prefix to be added to all plugin messages.
+# You can customize it with colors and formatting.
+prefix: '&b[SecureCommands] &r'
+
+# ⚠️ Error and Warning Messages ⚠️
+errors:
+  no_permission: "&cYou do not have permission to use this command."
+  only_players: '&cOnly players can execute this command.'
+  only_console: '&cThis command can only be executed from the console.'
+  not_whitelisted: '%prefix%&cYou are not on the whitelist.'
+  already_logged_in: '%prefix%&cYou are already authenticated!'
+  not_authenticated: '%prefix%&cThis command is protected. Please use &a/sclogin <password>&c.'
+  secure_code_not_set: '%prefix%&cYou have not set a secure code yet. Use &a/sc setcode <password>&c to create one.'
+  secure_code_already_set: '%prefix%&cYou have already set a secure code.'
+  invalid_code: '%prefix%&cIncorrect code.'
+  invalid_usage_login: '%prefix%Usage: &a/sclogin <code>'
+  invalid_usage_setcode: '%prefix%Usage: &a/sc setcode <password>'
+  invalid_usage_resetcode: '%prefix%Usage: &a/sc resetcode <player>'
+  unknown_subcommand: '%prefix%&cUnknown subcommand. Usage: &a/sc [setcode|resetcode <player>|resetall|reload]'
+  db_error_setting_code: '%prefix%&cAn error occurred while setting the secure code.'
+  db_error_resetting_code: '%prefix%&cAn error occurred while trying to reset the secure code for %player%.'
+  db_error_resetting_all: '%prefix%&cAn error occurred while trying to reset all secure codes.'
+  no_op_permission: '%prefix%&cOnly operators or the console can execute this command.'
+  player_not_found: '%prefix%&cPlayer not found: &r%player%.'
+  player_not_whitelisted_for_code: '%prefix%&cPlayer &r%player%&c is not on the whitelist to have a secure code.'
+  op_removed: '%prefix%&cYour OP status has been removed because you are not on the whitelist.'
+  invalid_usage_add: '%prefix%Usage: &a/sc add <player>'
+  player_already_whitelisted: '%prefix%&cPlayer &r%player%&c is already on the whitelist.'
+  invalid_usage_remove: '%prefix%Usage: &a/sc remove <player>'
+  player_not_whitelisted: '%prefix%&cPlayer &r%player%&c is not on the whitelist.'
+  missing_command_arg: "&cPlease specify the command you want to add or remove."
+  command_already_blocked: "&cThe command '%command%' is already blocked."
+  command_not_blocked: "&cThe command '%command%' is not in the list of blocked commands."
+  premium_kick: "&cIt seems you are not a premium user. Please log in with the correct account."
+  blocked_user: "%prefix%&cYou are permanently blocked from accessing this plugin."
+  premium_check_disabled_login_required: "&cYour premium check is disabled. You must log in manually with /sclogin."
+  invalid_usage_premium: "&cIncorrect usage. Use /sc premium <player>."
+
+# ✅ Success Messages ✅
+success:
+  authenticated: '%prefix%&aYou are now authenticated!'
+  logged_in: '%prefix%&aLogged in successfully!'
+  code_set: '%prefix%&aSecure code set successfully.'
+  code_reset_player: '%prefix%&aThe secure code for player &a%player%&r has been reset successfully.'
+  code_reset_all: '%prefix%&aAll secure codes have been reset successfully.'
+  config_reloaded: '%prefix%&aConfiguration file has been reloaded.'
+  secure_code_sent: '%prefix%&aA secure code has been sent to &r%player%&a via Discord.'
+  player_added_to_whitelist: '%prefix%&aPlayer &a%player%&r has been added to the whitelist.'
+  player_removed_from_whitelist: '%prefix%&aPlayer &a%player%&r has been removed from the whitelist.'
+  command_added: "&aThe command '%command%' has been added to the list of blocked commands."
+  command_removed: "&aThe command '%command%' has been removed from the list of blocked commands."
+  premium_no_login: "%prefix%You are a premium user, you don't need to log in."
+  premium_no_code: "%prefix%You are a premium user, you don't need to set a code."
+  premium_authenticated: "%prefix%&aYou have been automatically authenticated as a premium user."
+  premium_check_disabled: "%prefix%&aPremium check has been disabled."
+  premium_check_enabled: "%prefix%&aPremium check has been enabled."
+
+# 🤖 System and Special Messages 🤖
+system:
+  enabled: '&aSecureCommands enabled!'
+  disabled: '&cSecureCommands disabled!'
+  db_connected: 'Connected to database successfully!'
+  db_failed: 'Database connection failed! Shutting down the server...'
+  db_not_configured: 'Database is not configured properly in config.yml!'
+  update_available: 'A new version of SecureCommands is available: %version%'
+  update_check_failed: 'Could not check for updates: %error%'
+
+# Discord Messages
+discord:
+  disabled: 'Discord notifications are disabled in config.yml. Skipping.'
+  webhook_not_configured: 'Discord webhook URL not configured. Skipping notification.'
+  sent: 'Discord notification sent successfully.'
+  failed: 'Discord notification failed with response code: %code%.'
+  discord_alert_title: '🚫 Security Alert 🚫'
+  discord_alert_message: 'Player &e%player%&r tried to use an incorrect code: &c%password%&r.'
+  discord_blocked_title: '🚨 Command Blocked 🚨'
+  discord_blocked_message: 'Player &e%player%&r tried to use a protected command: &c%command%&r.'
+  discord_command_used_title: '🔒 Command Used 🔒'
+  discord_command_used_message: 'Authenticated player &e%player%&r used a protected command: &c%command%&r.'
+
+# Plugman Blocker Messages
+commands:
+  plugman_blocked: "&c⚠ You cannot use this command."

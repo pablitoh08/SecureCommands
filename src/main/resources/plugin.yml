@@ -1,0 +1,15 @@
+name: SecureCommands
+version: 2.3
+main: org.pablito.secureCommands.SecureCommands
+api-version: 1.19
+author: Pablito
+description: A plugin to secure specific commands with a password and whitelist system.
+
+commands:
+  sclogin:
+    description: Authenticate to use blocked commands
+    usage: /sclogin <password>
+  sc:
+    description: Main command for SecureCommands, including administrative functions.
+    usage: /sc [setcode|resetcode|resetall|reload|add|remove|addcommand|removecommand|premium]
+    permission: securecommands.admin

@@ -1,0 +1,87 @@
+# SecureCommands - Messages du Plugin (Français)
+# ------------------------------------
+# Ce fichier de configuration centralise tous les messages du plugin.
+
+# Préfixe à ajouter à tous les messages du plugin.
+# Vous pouvez le personnaliser avec des couleurs et du formatage.
+prefix: '&b[SecureCommands] &r'
+
+# ⚠️ Messages d'Erreur et d'Avertissement ⚠️
+errors:
+  no_permission: "&cVous n'avez pas la permission d'utiliser cette commande."
+  only_players: '&cSeuls les joueurs peuvent exécuter cette commande.'
+  only_console: '&cCette commande ne peut être exécutée que depuis la console.'
+  not_whitelisted: '%prefix%&cVous n''êtes pas sur la liste blanche.'
+  already_logged_in: '%prefix%&cVous êtes déjà authentifié !'
+  not_authenticated: '%prefix%&cCette commande est protégée. Veuillez utiliser &a/sclogin <mot_de_passe>&c.'
+  secure_code_not_set: '%prefix%&cVous n''avez pas encore défini de code de sécurité. Utilisez &a/sc setcode <mot_de_passe>&c pour en créer un.'
+  secure_code_already_set: '%prefix%&cVous avez déjà défini un code de sécurité.'
+  invalid_code: '%prefix%&cCode incorrect.'
+  invalid_usage_login: '%prefix%Utilisation : &a/sclogin <code>'
+  invalid_usage_setcode: '%prefix%Utilisation : &a/sc setcode <mot_de_passe>'
+  invalid_usage_resetcode: '%prefix%Utilisation : &a/sc resetcode <joueur>'
+  unknown_subcommand: '%prefix%&cSous-commande inconnue. Utilisation : &a/sc [setcode|resetcode <joueur>|resetall|reload]'
+  db_error_setting_code: '%prefix%&cUne erreur est survenue lors de la définition du code de sécurité.'
+  db_error_resetting_code: '%prefix%&cUne erreur est survenue en essayant de réinitialiser le code de sécurité pour %player%.'
+  db_error_resetting_all: '%prefix%&cUne erreur est survenue en essayant de réinitialiser tous les codes de sécurité.'
+  no_op_permission: '%prefix%&cSeuls les opérateurs ou la console peuvent exécuter cette commande.'
+  player_not_found: '%prefix%&cJoueur non trouvé : &r%player%.'
+  player_not_whitelisted_for_code: '%prefix%&cLe joueur &r%player%&c n''est pas sur la liste blanche pour avoir un code de sécurité.'
+  op_removed: '%prefix%&cVotre statut OP a été retiré car vous n''êtes pas sur la liste blanche.'
+  invalid_usage_add: '%prefix%Utilisation : &a/sc add <joueur>'
+  player_already_whitelisted: '%prefix%&cLe joueur &r%player%&c est déjà sur la liste blanche.'
+  invalid_usage_remove: '%prefix%Utilisation : &a/sc remove <joueur>'
+  player_not_whitelisted: '%prefix%&cLe joueur &r%player%&c n''est pas sur la liste blanche.'
+  missing_command_arg: "&cVeuillez spécifier la commande que vous souhaitez ajouter ou supprimer."
+  command_already_blocked: "&cLa commande '%command%' est déjà bloquée."
+  command_not_blocked: "&cLa commande '%command%' n''est pas dans la liste des commandes bloquées."
+  premium_kick: "&cIl semble que vous n''êtes pas un utilisateur premium. Veuillez vous connecter avec le bon compte."
+  blocked_user: "%prefix%&cVotre accès à ce plugin est bloqué de manière permanente."
+  premium_check_disabled_login_required: "&cVotre vérification premium est désactivée. Vous devez vous connecter manuellement avec /sclogin."
+  invalid_usage_premium: "&cUtilisation incorrecte. Utilisez /sc premium <joueur>."
+
+# ✅ Messages de Succès ✅
+success:
+  authenticated: '%prefix%&aVous êtes maintenant authentifié !'
+  logged_in: '%prefix%&aConnexion réussie !'
+  code_set: '%prefix%&aCode de sécurité défini avec succès.'
+  code_reset_player: '%prefix%&aLe code de sécurité du joueur &a%player%&r a été réinitialisé avec succès.'
+  code_reset_all: '%prefix%&aTous les codes de sécurité ont été réinitialisés avec succès.'
+  config_reloaded: '%prefix%&aLe fichier de configuration a été rechargé.'
+  secure_code_sent: '%prefix%&aUn code de sécurité a été envoyé à &r%player%&a via Discord.'
+  player_added_to_whitelist: '%prefix%&aLe joueur &a%player%&r a été ajouté à la liste blanche.'
+  player_removed_from_whitelist: '%prefix%&aLe joueur &a%player%&r a été retiré de la liste blanche.'
+  command_added: "&aLa commande '%command%' a été ajoutée à la liste des commandes bloquées."
+  command_removed: "&aLa commande '%command%' a été retirée de la liste des commandes bloquées."
+  premium_no_login: "%prefix%Vous êtes un utilisateur premium, vous n'avez pas besoin de vous connecter."
+  premium_no_code: "%prefix%Vous êtes un utilisateur premium, vous n'avez pas besoin de définir un code."
+  premium_authenticated: "%prefix%&aVous avez été automatiquement authentifié en tant qu'utilisateur premium."
+  premium_check_disabled: "%prefix%&aLa vérification premium a été désactivée."
+  premium_check_enabled: "%prefix%&aLa vérification premium a été activée."
+
+# 🤖 Messages Système et Spéciaux 🤖
+system:
+  enabled: '&aSecureCommands activé !'
+  disabled: '&cSecureCommands désactivé !'
+  db_connected: 'Connexion à la base de données réussie !'
+  db_failed: 'Échec de la connexion à la base de données ! Arrêt du serveur...'
+  db_not_configured: 'La base de données n''est pas configurée correctement dans config.yml !'
+  update_available: 'Une nouvelle version de SecureCommands est disponible : %version%'
+  update_check_failed: 'Impossible de vérifier les mises à jour : %error%'
+
+# Messages Discord
+discord:
+  disabled: 'Les notifications Discord sont désactivées dans config.yml. Ignoré.'
+  webhook_not_configured: 'URL du webhook Discord non configurée. Notification ignorée.'
+  sent: 'Notification Discord envoyée avec succès.'
+  failed: 'La notification Discord a échoué avec le code de réponse : %code%.'
+  discord_alert_title: '🚫 Alerte de Sécurité 🚫'
+  discord_alert_message: 'Le joueur &e%player%&r a essayé d''utiliser un code incorrect : &c%password%&r.'
+  discord_blocked_title: '🚨 Commande Bloquée 🚨'
+  discord_blocked_message: 'Le joueur &e%player%&r a essayé d''utiliser une commande protégée : &c%command%&r.'
+  discord_command_used_title: '🔒 Commande Utilisée 🔒'
+  discord_command_used_message: 'Le joueur authentifié &e%player%&r a utilisé une commande protégée : &c%command%&r.'
+
+# Messages du Bloqueur de Plugman
+commands:
+  plugman_blocked: "&c⚠ Vous ne pouvez pas utiliser cette commande."
